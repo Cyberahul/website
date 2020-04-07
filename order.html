@@ -1,0 +1,182 @@
+<html>
+<head>
+	<title>Order Now</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+    <link rel="stylesheet" type="text/css" href="CSS_files/order.css">
+	<link rel="icon" href="images/final1.png">
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Flamenco" >
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="container">
+
+ 
+
+    <div class="container-form">
+<h2 class="heading heading-yellow"><center>Online Ordering Form</center></h2>
+
+<form method="post"  onSubmit="return validateForm()" action="index.html" name="Form">
+ <br>
+<div class="form-field">
+<p>Full Name</p>
+<input type="text" name="fname" class="in" placeholder="Enter your First Name" autocomplete="off"><input type="text" name="lname" placeholder="Enter your Last Name" class="in" autocomplete="off">
+</div>
+
+<div class="form-field">
+<p>Address&nbsp&nbsp</p>
+<input type="text" name="add" class="in" placeholder="House Number" autocomplete="off">
+<input type="text"  name="add1" class="in" autocomplete="off" placeholder="Street Name">
+</div>
+          
+
+<div class="form-field">
+<p>Mobile Number</p>
+<input type="number" name="numb" placeholder="Enter your Mobile Number" class="mm" autocomplete="off">
+</div>
+
+<div class="form-field">
+<p>Email </p>
+<input type="email" name="eemail" placeholder="Enter your Email Address" class="mm" autocomplete="off">
+</div>
+
+<div class="form-field">
+<p>Product Details </p>
+<input type="number" name="nn" placeholder="Quantity" class="in22" autocomplete="off">
+
+<select class="in33" name="pp1"  autocomplete="off" >
+                      <option value="Product Name"> Chapati/Soup ₹ 10/pc</option>
+                        <option value="Regular"> Regular ₹ 50/pc</option>
+                        <option value="Hot"> Hot ₹ 10/pc</option>
+                        <option value="Chilled"> Chilled ₹ 30/pc</option>
+                        <option value="Frozen"> Frozen ₹ 50/pc</option>
+                        <option value="Pureed"> Pureed ₹ 90/pc</option>
+                        <option value="Chopped">Chopped ₹ 120/pc</option>
+                    
+                      </select>
+<select class="in" name="pp"  autocomplete="off" >
+                      <option value=""> Select Product /Item </option>
+                        <option value="Regular"> Regular Rice-Dal ₹ 200/pc </option>
+
+                        <option value="Regular"> Grilled Crab with French Fries ₹ 129/pc </option>
+                        <option value="Regular"> Manchurian Dry ₹ 149/pc </option>
+                        <option value="Regular"> Grilled Crab Sandwich  ₹ 89/pc </option>
+                        <option value="Regular"> Grilled Beef with potatoes ₹ 159/pc </option>
+                        <option value="Regular"> Grilled Crab Mushroom  ₹ 179/pc </option>
+                        <option value="Regular"> Honey Chilly  ₹ 199/pc </option>
+                        <option value="Regular"> Chilly Paneer Dry  ₹ 139/pc </option>
+                        <option value="Regular"> Seasonal Veg. & Dessert ₹ 119/pc </option>
+                        <option value="Regular"> Rogan Soya and Roti ₹ 259/pc </option>
+
+                        <option value="Regular"> Butter Scotch ₹ 99/pc </option>
+                        <option value="Regular"> Vanilla with Mango ₹ 199/pc </option>
+                        <option value="Regular"> Chocolate / Coffee ₹ 169/pc </option>
+                        <option value="Regular"> Myra Misfit ₹ 219/pc </option>
+                        <option value="Regular"> Fratelli SETTE ₹ 299/pc </option>
+                        <option value="Regular"> Grover La Reserve ₹ 319/pc </option>
+                        <option value="Regular"> Anar Juice with Apple ₹ 69/pc </option>
+                        <option value="Regular"> Lemon Drop ₹ 49/pc </option>
+                        <option value="Regular"> Mango Juice ₹ 59/pc </option>
+
+                        <option value="Pureed"> Therapeutic - Diabetic 1800 A.D.A. ₹ 400/pc </option>
+                        
+                            <option value="Chopped">More Items </option>
+                      </select>
+</div>
+
+
+<div class="form-field">
+<p>Payment Mode </p>
+<p> Cash On Delivery (COD)
+        <input type="radio" name="pay" id="mode" value="mode" checked autocomplete="off">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <label for="onli">Online Payment</label>
+        <input type="radio" name="pay" onclick="popup1()" id="onli" value="onli" autocomplete="off">
+</div>
+
+
+
+
+
+<button type="submit" class="btn">Order Now</button>
+ 
+    
+  
+
+</form>
+</div>
+
+</div>
+
+
+<script>
+function validateForm() {
+  var x = document.forms["Form"]["fname"].value;
+  var y = document.forms["Form"]["lname"].value;
+ 
+
+  if (x == "" && y== "") {
+       
+    alert("Please fill the All Other Details");
+    return false;
+  }
+   if (x == "") {
+    alert("Please fill the First Name");
+    return false;
+  }
+  if (y == "") {
+    alert("Please fill the Last Name");
+    return false;
+  }
+   var p=document.forms["Form"]["add"].value;
+   if (p == "") {
+    alert("Please fill the Full Address");
+    return false;
+  }
+  var h=document.forms["Form"]["add1"].value;
+   if (h == "") {
+    alert("Please fill the Full Address");
+    return false;
+  }
+  var f=document.forms["Form"]["numb"].value;
+   if (f == "") {
+    alert("Please fill the Mobile Number");
+    return false;
+  }
+
+  var z=document.forms["Form"]["eemail"].value;
+   if (z == "") {
+    alert("Please fill the Email Address");
+    return false;
+  }
+  
+
+   var q=document.forms["Form"]["nn"].value;
+  if (q == "") {
+    alert("Please fill the Quantity");
+    return false;
+  }
+
+  var c=document.forms["Form"]["pp"].value;
+  if (c == "") {
+    alert("Please Select the Product/Item ");
+    return false;
+  }
+   alert("Your Order is Placed Succesfully !");
+}
+
+
+
+
+function popup1(){
+window.open('Online_pay.html','_self');
+}
+
+
+
+</script>
+
+</body>
+</html>

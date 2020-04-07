@@ -1,0 +1,60 @@
+<html>
+<head>
+	<title>Sign-In </title>
+	<link rel="stylesheet" type="text/css" href="CSS_files/style.css">
+    <link rel="stylesheet" type="text/css" href="CSS_files/sign_in.css">
+	<link rel="icon" href="images/final1.png">
+
+</head>
+<body>
+
+
+<div class="img">
+   <div class="center">
+    <img src="images/usr.png" id="profile">
+    <h4>Sign In</h4>
+    <form name="Form" action="index.html" onsubmit="return validateForm()" method="post" required>
+     <div><p class="usr">Username</p>
+      <input type="email" name="fname" class="input" placeholder="Enter Your Username" autocomplete="off">
+     </div>
+     <br>
+    <div><p class="usr"> Password</p>
+      <input type="Password" name="name" class="input" placeholder="Enter Your Password" autocomplete="off">
+     </div><br>
+     <div class="box">
+     <input type="checkbox" name="rem"  autocomplete="off">
+    <label for="rem"> Remember me</label></div>
+     <div class="butt"><br>
+      <button type="submit"> LOGIN </button>
+     </div>
+      <p class="forgot"><a href="index.html">Fogot Password ?</a></p>
+  <p class="newusr">New User! <a href="Sign_up.html">Sign up here</p></a>
+    </form> <br>
+   
+   </div>
+  </div>
+
+
+<!--Java script-->
+<script>
+function validateForm() {
+  var x = document.forms["Form"]["fname"].value;
+  var y = document.forms["Form"]["name"].value;
+  if (x == "" && y== "") {
+    alert("Please fill the Username and Password");
+    return false;
+  }
+  else if (x == "") {
+    alert("Please fill the Username");
+    return false;
+  }
+  else if (y == "") {
+    alert("Please fill the Password");
+    return false;
+  }
+} 
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<html>
+<head>
+<title> Payment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+    <link rel="stylesheet" type="text/css" href="CSS_files/online.css">
+	<link rel="icon" href="images/final1.png">
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Flamenco" >
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+ 
+ <body>
+ <div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form method="post"  onSubmit="return validateForm()" action="index.html" name="Form">
+
+        <div class="row">
+          <div class="col-50">
+           <center> <h3>Billing Address</h3></center>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" autocomplete="off" placeholder="John M. Doe">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" autocomplete="off" placeholder="zaika@example.com">
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" autocomplete="off" placeholder="542 W. 15th Street">
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" autocomplete="off"placeholder="Indore">
+
+            <div class="row">
+              <div class="col-50">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" autocomplete="off"placeholder="Madhya Pradesh">
+              </div>
+              <div class="col-50">
+                <label for="zip">Zip</label>
+                <input type="number" id="zip" name="zip" autocomplete="off" placeholder="144001">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname" autocomplete="off" placeholder="John More Doe">
+            <label for="ccnum">Credit card number</label>
+            <input type="number" id="ccnum" name="cardnumber" autocomplete="off" placeholder="1111-2222-3333-4444">
+            <label for="expmonth">Exp Month</label>
+            <input type="text" id="expmonth" autocomplete="off" name="expmonth" placeholder="September">
+
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Exp Year</label>
+                <input type="number" id="expyear" autocomplete="off" name="expyear" placeholder="2018">
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="number" id="cvv"b autocomplete="off" name="cvv" placeholder="352">
+              </div>
+              <div class="col-50">
+                <label for="Amount">Amount</label>
+                <input type="number" class="amount" autocomplete="off" name="amo" placeholder="Enter your Amount">
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <label>
+          <input type="checkbox"  autocomplete="off" name="sameadr"> Delivery address same as billing</input>
+        </label>
+        <input type="submit" value="Continue to Pay" class="btn">
+      </form>
+    </div>
+  </div>
+
+  
+</div> 
+
+
+
+
+<script>
+
+function validateForm(){
+
+var x = document.forms["Form"]["firstname"].value;
+  var y = document.forms["Form"]["email"].value;
+ 
+
+  if (x == "" && y== "") {
+       
+    alert("Please fill the All Other Details");
+    return false;
+  }
+   if (x == "") {
+    alert("Please fill the Full Name");
+    return false;
+  }
+  if (y == "") {
+    alert("Please fill the Email Address");
+    return false;
+  }
+    var z = document.forms["Form"]["address"].value;
+  if (z == "") {
+    alert("Please fill the Address");
+    return false;
+  }
+
+var o = document.forms["Form"]["city"].value;
+  if (o == "") {
+    alert("Please fill the City");
+    return false;
+  }
+  var p = document.forms["Form"]["state"].value;
+  if (p == "") {
+    alert("Please fill the State");
+    return false;
+  }
+  var q = document.forms["Form"]["zip"].value;
+  if (q == "") {
+    alert("Please fill the Zip Code");
+    return false;
+  }
+var r = document.forms["Form"]["cardname"].value;
+  if (r == "") {
+    alert("Please fill Name On Card");
+    return false;
+  }
+  var s = document.forms["Form"]["cardnumber"].value;
+  if (s == "") {
+    alert("Please fill the Card Number");
+    return false;
+  }
+  var t = document.forms["Form"]["expmonth"].value;
+  if (t == "") {
+    alert("Please fill the Expiry Month");
+    return false;
+  }
+  var u = document.forms["Form"]["expyear"].value;
+  if (u == "") {
+    alert("Please fill the Expiry Year");
+    return false;
+  }
+  var v = document.forms["Form"]["cvv"].value;
+  if (v == "") {
+    alert("Please fill the CVV Number");
+    return false;
+  }
+  var j = document.forms["Form"]["amo"].value;
+  if (j == "") {
+    alert("Please fill the Amount");
+    return false;
+  }
+
+
+    alert("Your Order is Placed Succesfully !");
+  }
+
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<html>
+<head>
+	<title>Table Reservation</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+    <link rel="stylesheet" type="text/css" href="CSS_files/reserv.css">
+	<link rel="icon" href="images/final1.png">
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Flamenco" >
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="container-time">
+        <h2 class="heading"> Time Open </h2>
+        <h3 class="heading-days">Monday-Friday</h3>
+        <p>8 am - 12am {Breakfast}</p>
+        <p>7 am - 12am {Lunch/Dinner}</p><br>
+
+        <h3 class="heading-days">Saturday And Sunday</h3>
+        <p>8 am - 12am {Breakfast}</p>
+        <p>8 am - 12am {Lunch/Dinner}</p><br>
+            <hr>
+
+            <h4 class="heding-phone">Call Us: (+91) 900-404-3742</h4>
+    </div>
+
+    <div class="container-form">
+<h2 class="heading heading-yellow"><center> Book A Table</center></h2>
+
+<form method="post"  onSubmit="return validateForm()" action="index.html" name="Form">
+ 
+<div class="form-field">
+<p>First Name</p>
+<input type="text" name="fname" class="in" placeholder="Enter your First Name" autocomplete="off">
+</div>
+
+<div class="form-field">
+<p>Last Name</p>
+<input type="text" name="lname" placeholder="Enter your Last Name" class="in" autocomplete="off">
+</div>
+
+<div class="form-field">
+<p> Email</p>
+<input type="email" name="eemail" placeholder="Enter your Email Address" class="in" autocomplete="off">
+</div>
+
+<div class="form-field">
+<p>Date</p>
+<input type="date" name="ddate" class="in" autocomplete="off">
+</div>
+
+<div class="form-field">
+<p> Time</p>
+<input type="time"  name="ttime" class="in"  autocomplete="off">
+</div>
+
+<div class="form-field">
+<p> How many people ?</p>
+<select name="select" class="in" name="person" autocomplete="off" >
+
+<option value="1">1 person</option>
+<option value="2">2-3 person</option>
+<option value="3">4-6 person</option>
+<option value="4">7-9 person</option>
+<option value="5">10+ person</option>
+
+</select>
+</div>
+
+<button type="submit" class="btn">Submit Details</button>
+
+</form>
+</div>
+
+</div>
+
+
+<script>
+function validateForm() {
+  var x = document.forms["Form"]["fname"].value;
+  var y = document.forms["Form"]["lname"].value;
+ 
+
+  if (x == "" && y== "") {
+       
+    alert("Please fill the All Other Details");
+    return false;
+  }
+   if (x == "") {
+    alert("Please fill the First Name");
+    return false;
+  }
+  if (y == "") {
+    alert("Please fill the Last Name");
+    return false;
+  }
+
+  var z=document.forms["Form"]["eemail"].value;
+   if (z == "") {
+    alert("Please fill the Email Address");
+    return false;
+  }
+   var p=document.forms["Form"]["ddate"].value;
+   if (p == "") {
+    alert("Please fill the Date");
+    return false;
+  }
+
+   var q=document.forms["Form"]["ttime"].value;
+  if (q == "") {
+    alert("Please fill the Time");
+    return false;
+  }
+   var r=document.forms["Form"]["person"].value;
+   if (r == "") {
+    alert("Please fill the Number of Person");
+    return false;
+  }
+}
+
+
+</script>
+
+</body>
+</html>

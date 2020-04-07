@@ -1,0 +1,124 @@
+<html>
+<head>
+	<title>Sign up</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+    <link rel="stylesheet" type="text/css" href="CSS_files/sign-up.css">
+	<link rel="icon" href="images/final1.png">
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Flamenco" >
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="container-time">  
+    </div>
+
+    <div class="container-form">
+<h2 class="heading heading-yellow"><center> Create An Account</center></h2>
+
+<form method="post"  onSubmit="return validateForm()" action="index.html" name="Form">
+ <br>
+<div class="form-field">
+<p>First Name</p>
+<input type="text" name="fname" class="in" placeholder="Enter your First Name" autocomplete="off">
+</div>
+
+<div class="form-field">
+<p>Last Name</p>
+<input type="text" name="lname" placeholder="Enter your Last Name" class="in" autocomplete="off">
+</div>
+
+<div class="form-field">
+<p>Mobile Number</p>
+<input type="number" name="numb" placeholder="Enter your Mobile Number" class="in" autocomplete="off">
+</div>
+
+<div class="form-field">
+<p>Email </p>
+<input type="email" name="eemail" placeholder="Enter your Email Address" class="in" autocomplete="off">
+</div>
+
+<div class="form-field">
+<p>Password </p>
+<input type="password" name="pass1" placeholder="Enter your Password" class="in" autocomplete="off">
+</div>
+
+<div class="form-field">
+<p>Confirm Password</p>
+<input type="password" name="pass" placeholder="Confirm Your Password" class="in" autocomplete="off">
+</div>
+
+<div class="form-field">
+<p>Gender</p>
+<b> <br> <label for="male">Male</label>
+        <input type="radio" name="gender" id="male" value="male" checked autocomplete="off">&nbsp&nbsp&nbsp
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female" value="female" autocomplete="off">
+</div>
+
+
+ <p id="ee">By creating an account you agree to our <a href="index.html">Terms & Privacy</a>.</p>
+<button type="submit" class="btn">Sign Up</button>
+ 
+    <p>Already have an account? <a href="Sign_in.html">Sign in</a>.</p>
+  
+
+</form>
+</div>
+
+</div>
+
+
+<script>
+function validateForm() {
+  var x = document.forms["Form"]["fname"].value;
+  var y = document.forms["Form"]["lname"].value;
+ 
+
+  if (x == "" && y== "") {
+       
+    alert("Please fill the All Other Details");
+    return false;
+  }
+   if (x == "") {
+    alert("Please fill the First Name");
+    return false;
+  }
+  if (y == "") {
+    alert("Please fill the Last Name");
+    return false;
+  }
+  var f=document.forms["Form"]["numb"].value;
+   if (f == "") {
+    alert("Please fill the Mobile Number");
+    return false;
+  }
+
+  var z=document.forms["Form"]["eemail"].value;
+   if (z == "") {
+    alert("Please fill the Email Address");
+    return false;
+  }
+   var p=document.forms["Form"]["pass1"].value;
+   if (p == "") {
+    alert("Please fill the Password");
+    return false;
+  }
+
+   var q=document.forms["Form"]["pass"].value;
+  if (q == "") {
+    alert("Please fill the Confirm Password");
+    return false;
+  }
+  
+}
+
+
+</script>
+
+</body>
+</html>
