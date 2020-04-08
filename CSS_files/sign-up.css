@@ -3,7 +3,7 @@
         font-weight: 400;
         color: #fff;
         letter-spacing: 1px;
-        background: url("../images/sign_.jpg")fixed;
+        background: url("../images/sign_.jpg")center fixed;
     }
     
     .container {
@@ -19,7 +19,7 @@
     }
     
     .container-time {
-      
+       background: url("../images/sign2.png");
         padding: 50px;
         height: 734px;
         text-align: center;
