@@ -266,7 +266,7 @@ One of the most popular eating joints in the city, Zaika Restaurant serves you w
 
 <h2>Newsletter</h2><br><p>Far far away, behind the word mountains, far from the countries.</p>
 <br>
-<form name="Form" onsubmit="return validateForm()" method="post" required>
+<form name="Form" action="index.html" onsubmit="return validateForm()" method="post" required>
 
 <input type="email" name="email" class="text-input contact-input" placeholder="Your Email Address" autocomplete="off">
 <br><br>
@@ -356,9 +356,6 @@ function validateForm() {
     alert("Please fill the Email Address");
     return false;
   }
-	else{
-	window.open("https://hackerrahul1.github.io/website/index.html"); 
-	}
 } 
 
 
