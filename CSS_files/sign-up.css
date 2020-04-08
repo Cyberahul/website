@@ -3,7 +3,7 @@
         font-weight: 400;
         color: #fff;
         letter-spacing: 1px;
-        background: url("../images/bg_1.jpg") center fixed;
+        background: url("../images/bg_1.jpg")fixed;
     }
     
     .container {
@@ -19,7 +19,7 @@
     }
     
     .container-time {
-        background: url("../images/bg_1.jpg");
+      
         padding: 50px;
         height: 734px;
         text-align: center;
