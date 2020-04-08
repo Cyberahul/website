@@ -21,6 +21,22 @@
         height: 100vh;
     }
     
+    .hh {
+        text-align: center;
+    }
+    
+    #vvcv {
+        color: #cc9966;
+        font-family: Brush Script MT;
+        font-size: 70px;
+    }
+    
+    #vvc {
+        color: #363532;
+        font-family: Forte;
+        font-size: 40px;
+    }
+    
     .clearfix:after {
         content: ".";
         visibility: hidden;
